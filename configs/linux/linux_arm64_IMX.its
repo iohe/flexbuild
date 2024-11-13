@@ -37,7 +37,7 @@
 
 		imx8mqevk-dtb {
 			description = "Flattened Device Tree blob";
-			data = /incbin/("../../build/linux/kernel/arm64/IMX/imx8mq-evk.dtb");
+			data = /incbin/("../../build/linux/kernel/arm64/IMX/maaxboard.dtb");
 			type = "flat_dt";
 			arch = "arm64";
 			os = "linux";

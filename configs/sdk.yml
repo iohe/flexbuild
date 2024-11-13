@@ -59,7 +59,7 @@ BUILD:
 # default kernel config list
 KERNEL_CONFIG:
   ARM64_LS:  "defconfig lsdk.config"
-  ARM64_IMX: "defconfig imx.config imx_v8_defconfig"
+  ARM64_IMX: "defconfig imx.config maaxboard_defconfig"
   ARM32_LS:  "multi_v7_defconfig multi_v7_lpae.config lsdk.config"
   ARM32_IMX: "imx_v7_defconfig"
 
@@ -74,10 +74,14 @@ repo:
 
 # BSP component repositories
   atf:
-    url:  https://github.com/nxp-qoriq/atf.git
+#    url:  https://github.com/nxp-qoriq/atf.git
+    url:  https://github.com/avnet/imx-atf.git
+    commit:  8dbe28631802a51
 
   uboot:
-    url:  https://github.com/nxp-qoriq/u-boot.git
+#    url:  https://github.com/nxp-qoriq/u-boot.git
+    url:  https://github.com/iohe/maaxboard-uboot-imx.git
+    tag:  ihmaaxboard_lf-6.6.3-1.0.0
 
   rcw:
     url:  https://github.com/nxp-qoriq/rcw.git
@@ -122,7 +126,7 @@ repo:
     url:  https://www.nxp.com/lgfiles/NMG/MAD/YOCTO/imx-sc-firmware-1.15.0.bin
 
   firmware_imx_bin:
-    url:  https://www.nxp.com/lgfiles/NMG/MAD/YOCTO/firmware-imx-8.21.bin
+    url:  https://www.nxp.com/lgfiles/NMG/MAD/YOCTO/firmware-imx-8.23.bin
     # /lib/firmware for ddr,hdmi,dp,vpu,easrc,epdc,xcvr,xuvi
 
   imx_firmware:
@@ -138,8 +142,8 @@ repo:
 
 # kernel and modules git repositories
   linux:
-    url:  https://github.com/nxp-imx/linux-imx.git
-    tag:  lf-6.6.3-1.0.0
+    url:  https://github.com/iohe/maaxboard-linux-imx.git
+    tag:  ihmaaxboard_lf-6.6.3-1.0.0
 
   cryptodev_linux:
     url:  https://github.com/cryptodev-linux/cryptodev-linux.git

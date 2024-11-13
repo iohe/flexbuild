@@ -44,6 +44,8 @@ define imx_mkimage_target
 	SOC=iMX8MN; SOC_FAMILY=iMX8M; target=flash_ddr4_evk; \
     elif echo $1 | grep -qE ^imx8mn_evk; then \
 	SOC=iMX8MN; SOC_FAMILY=iMX8M; target=flash_evk; \
+    elif echo $1 | grep -qE ^maaxboard; then \
+	SOC=iMX8M; SOC_FAMILY=iMX8M; target=flash_ddr4_val; \
     elif echo $1 | grep -qE ^imx8mq_ddr4_val; then \
 	SOC=iMX8M; SOC_FAMILY=iMX8M; target=flash_ddr4_val; \
     elif echo $1 | grep -qE ^imx8mq_evk; then \
